@@ -230,6 +230,7 @@
 #define BOARD_SMOOTHIEBOARD           2506  // Smoothieboard
 #define BOARD_TH3D_EZBOARD            2507  // TH3D EZBoard v1.0
 #define BOARD_BTT_SKR_V1_4_TURBO      2508  // BigTreeTech SKR v1.4 TURBO (Power outputs: Hotend0, Hotend1, Fan, Bed)
+#define BOARD_TINYFABV5               2022  // TinyFab CPU V5
 
 //
 // SAM3X8E ARM Cortex M3
