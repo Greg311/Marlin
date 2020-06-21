@@ -169,6 +169,12 @@
 #if ANY_THERMISTOR_IS(332) // Like table 1, but with 3V3 as input voltage for DUE
   #include "thermistor_332.h"
 #endif
+#if ANY_THERMISTOR_IS(500) // Pt100 with INA826 amp on Ultimaker v2.0 electronics
+  #include "thermistor_500.h"
+#endif
+#if ANY_THERMISTOR_IS(499) // Pt100 with INA826 amp on Ultimaker v2.0 electronics
+  #include "thermistor_499.h"
+#endif
 #if ANY_THERMISTOR_IS(666) // beta25 = UNK, R25 = 200K, Pull-up = 10 kOhm, "Unidentified 200K NTC thermistor (Einstart S)"
   #include "thermistor_666.h"
 #endif
@@ -186,6 +192,12 @@
 #endif
 #if ANY_THERMISTOR_IS(1000) // Custom
   const short temptable_1000[][2] PROGMEM = { { 0, 0 } };
+#endif
+#if ANY_THERMISTOR_IS(12345) // Cetus Hotend
+  #include "thermistor_Cetus_hotend.h"
+#endif
+#if ANY_THERMISTOR_IS(123456) // Cetus Bed
+  #include "thermistor_Cetus_bed.h"
 #endif
 
 #define _TT_NAME(_N) temptable_ ## _N
