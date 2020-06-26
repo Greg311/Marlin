@@ -748,16 +748,17 @@
  * Default Axis Steps Per Unit (steps/mm)
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2...]]
- * 16 Microstepping
  */
-//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 80, 415 }
-/**
- * Default Axis Steps Per Unit (steps/mm)
- * Override with M92
- *                                      X, Y, Z, E0 [, E1[, E2...]]
- * 256 Microstepping
- */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 1280, 1280, 1280, 6640 }
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 80, 415 }        //16  with BMG
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 160, 830 }     //32  with BMG
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 320, 320, 320, 1660 }    //64  with BMG
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 640, 640, 640, 3320 }    //128 with BMG
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 1280, 1280, 1280, 6640 } //256 with BMG
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 80, 1800 }       //16   with Zesty Nimble V2
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 80, 3600 }       //32   with Zesty Nimble V2
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 80, 7200 }       //64   with Zesty Nimble V2
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 80, 14400 }      //128  with Zesty Nimble V2
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 80, 28800 }      //256  with Zesty Nimble V2
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -777,7 +778,7 @@
  * Override with M201
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 2000, 2000, 500, 120 }
+#define DEFAULT_MAX_ACCELERATION      { 1250, 1250, 400, 500 }
 
 //#define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2
 #if ENABLED(LIMITED_MAX_ACCEL_EDITING)
@@ -818,7 +819,7 @@
   #endif
 #endif
 
-#define DEFAULT_EJERK    3.0  // May be used by Linear Advance
+#define DEFAULT_EJERK    2.0  // May be used by Linear Advance
 
 /**
  * Junction Deviation Factor
