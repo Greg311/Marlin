@@ -196,7 +196,7 @@
 #define HEATER_0_PIN       P2_07
 #define HEATER_1_PIN       P1_23
 #ifndef FAN_PIN
-  #define FAN_PIN          P1_18
+#define FAN_PIN          P1_18
 #endif
 //#define FAN1_PIN           P1_18
 
