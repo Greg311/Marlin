@@ -38,8 +38,8 @@
 //
 // Servos
 //
-//#define SERVO0_PIN         P2_13 //DOOR
-#define SERVO0_PIN         P0_10 //SCR_ON
+#define SERVO0_PIN         P2_13 //DOOR
+//#define SERVO0_PIN         P0_10 //SCR_ON
 
 //
 // TMC StallGuard DIAG pins
@@ -177,7 +177,7 @@
 
 
   // Reduce baud rate to improve software serial reliability
-  //#define TMC_BAUD_RATE 19200
+  #define TMC_BAUD_RATE 19200
 #endif
 
 //
