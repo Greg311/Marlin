@@ -19,8 +19,10 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
+#define REVERSE_TEMP_SENSOR_RANGE_12345 1
 
-const short temptable_12345[][2] PROGMEM = {
+const temp_entry_t temptable_12345[] PROGMEM = {
+//const short temptable_12345[][2] PROGMEM = {
   { OV(  26), 10 },
   { OV(  52), 20 },
   { OV(  78), 30 },
