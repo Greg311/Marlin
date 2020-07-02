@@ -749,7 +749,7 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 80, 415 }        //16  with Stock
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 80, 115 }        //16  with Stock
 #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 80, 415 }        //16  with BMG
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 160, 830 }     //32  with BMG
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 320, 320, 320, 1660 }    //64  with BMG
