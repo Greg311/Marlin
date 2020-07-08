@@ -418,10 +418,10 @@
  *   998 : Dummy Table that ALWAYS reads 25°C or the temperature defined below.
  *   999 : Dummy Table that ALWAYS reads 100°C or the temperature defined below.
  * 
- *   12345 : Cetus stock hotend
- *   123456 : Cetus stock bed
+ *   12345 or 499: Cetus stock hotend
+ *   123456 or 500: Cetus stock bed
  */
-#define TEMP_SENSOR_0 12345
+#define TEMP_SENSOR_0 500
 #define TEMP_SENSOR_1 0
 #define TEMP_SENSOR_2 0
 #define TEMP_SENSOR_3 0
@@ -429,7 +429,7 @@
 #define TEMP_SENSOR_5 0
 #define TEMP_SENSOR_6 0
 #define TEMP_SENSOR_7 0
-#define TEMP_SENSOR_BED 123456
+#define TEMP_SENSOR_BED 499
 #define TEMP_SENSOR_PROBE 0
 #define TEMP_SENSOR_CHAMBER 0
 
@@ -749,8 +749,11 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 80, 115 }        //16  with Stock
-//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 160, 230 }        //32  with Stock
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 80, 115 }        //16  with Stock
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 160, 230 }     //32  with Stock
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 320, 320, 320, 460 }     //64  with Stock
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 640, 640, 640, 920 }     //128  with Stock
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 1280, 1280, 1280, 1840 } //256  with Stock
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 80, 415 }        //16  with BMG
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 160, 830 }     //32  with BMG
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 320, 320, 320, 1660 }    //64  with BMG
