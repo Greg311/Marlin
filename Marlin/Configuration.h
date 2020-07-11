@@ -335,7 +335,7 @@
   #define PSU_DEFAULT_OFF         // Keep power off until enabled directly with M80
   //#define PSU_POWERUP_DELAY 100   // (ms) Delay for the PSU to warm up to full power
 
-  #define AUTO_POWER_CONTROL      // Enable automatic control of the PS_ON pin
+  //#define AUTO_POWER_CONTROL      // Enable automatic control of the PS_ON pin
   #if ENABLED(AUTO_POWER_CONTROL)
     //#define AUTO_POWER_FANS         // Turn on PSU if fans need power
     //#define AUTO_POWER_E_FANS
@@ -418,8 +418,8 @@
  *   998 : Dummy Table that ALWAYS reads 25°C or the temperature defined below.
  *   999 : Dummy Table that ALWAYS reads 100°C or the temperature defined below.
  * 
- *   12345 or 499: Cetus stock hotend
- *   123456 or 500: Cetus stock bed
+ *   12345 or 500: Cetus stock hotend
+ *   123456 or 499: Cetus stock bed
  */
 #define TEMP_SENSOR_0 500
 #define TEMP_SENSOR_1 0
@@ -752,10 +752,11 @@
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 80, 115 }        //16  with Stock
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 160, 230 }     //32  with Stock
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 320, 320, 320, 460 }     //64  with Stock
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 640, 640, 640, 920 }     //128  with Stock
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 640, 640, 640, 920 }     //128  with Stock
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 1280, 1280, 1280, 1840 } //256  with Stock
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 1280, 1280, 1280, 920 } //256 128 e with Stock
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 80, 415 }        //16  with BMG
-//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 160, 830 }     //32  with BMG
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 160, 816 }     //32  with BMG 830 or 816
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 320, 320, 320, 1660 }    //64  with BMG
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 640, 640, 640, 3320 }    //128 with BMG
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 1280, 1280, 1280, 6640 } //256 with BMG
@@ -999,7 +1000,7 @@
  *
  * Specify a Probe position as { X, Y, Z }
  */
-#define NOZZLE_TO_PROBE_OFFSET { 0, -33, -0.264 }
+#define NOZZLE_TO_PROBE_OFFSET { 0, -33, -1.15 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
@@ -1106,7 +1107,7 @@
 // @section extruder
 
 // For direct drive extruder v9 set to true, for geared extruder set to false.
-#define INVERT_E0_DIR false
+#define INVERT_E0_DIR true
 #define INVERT_E1_DIR false
 #define INVERT_E2_DIR false
 #define INVERT_E3_DIR false
