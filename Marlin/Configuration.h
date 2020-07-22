@@ -421,7 +421,7 @@
  *   12345 or 500: Cetus stock hotend
  *   123456 or 499: Cetus stock bed
  */
-#define TEMP_SENSOR_0 12345
+#define TEMP_SENSOR_0 500
 #define TEMP_SENSOR_1 0
 #define TEMP_SENSOR_2 0
 #define TEMP_SENSOR_3 0
@@ -429,7 +429,7 @@
 #define TEMP_SENSOR_5 0
 #define TEMP_SENSOR_6 0
 #define TEMP_SENSOR_7 0
-#define TEMP_SENSOR_BED 123456
+#define TEMP_SENSOR_BED 499
 #define TEMP_SENSOR_PROBE 0
 #define TEMP_SENSOR_CHAMBER 0
 
@@ -495,9 +495,9 @@
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
   // Ultimaker
-  #define DEFAULT_Kp 13.43
-  #define DEFAULT_Ki 0.74
-  #define DEFAULT_Kd 61.00
+  #define DEFAULT_Kp 23.62
+  #define DEFAULT_Ki 1.27
+  #define DEFAULT_Kd 109.45
 
   // MakerGear
   //#define DEFAULT_Kp 7.0
@@ -546,9 +546,9 @@
 
   //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   //from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
-  #define DEFAULT_bedKp 8.38
-  #define DEFAULT_bedKi 1.67
-  #define DEFAULT_bedKd 27.97
+  #define DEFAULT_bedKp 10.05
+  #define DEFAULT_bedKi 2.01
+  #define DEFAULT_bedKd 33.53
 
   //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   //from pidautotune
@@ -759,9 +759,9 @@
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 1280, 1280, 1280, 1840 } //256  with Stock
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 1280, 1280, 1280, 920 } //256 128 e with Stock
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 80, 415 }        //16  with BMG
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 160, 830 }     //32  with BMG 830 or 816
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 160, 830 }     //32  with BMG 830 or 816
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 320, 320, 320, 1660 }    //64  with BMG
-//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 640, 640, 640, 3320 }    //128 with BMG
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 640, 640, 640, 3320 }    //128 with BMG
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 1280, 1280, 1280, 6640 } //256 with BMG
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 80, 1800 }       //16   with Zesty Nimble V2
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 80, 3600 }       //32   with Zesty Nimble V2
