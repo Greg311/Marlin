@@ -759,9 +759,9 @@
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 1280, 1280, 1280, 1840 } //256  with Stock
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 1280, 1280, 1280, 920 } //256 128 e with Stock
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 80, 415 }        //16  with BMG
-//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 160, 830 }     //32  with BMG 830 or 816
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 160, 830 }     //32  with BMG 830 or 816
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 320, 320, 320, 1660 }    //64  with BMG
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 640, 640, 640, 3320 }    //128 with BMG
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 640, 640, 640, 3320 }    //128 with BMG
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 1280, 1280, 1280, 6640 } //256 with BMG
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 80, 1800 }       //16   with Zesty Nimble V2
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 80, 3600 }       //32   with Zesty Nimble V2
@@ -1027,7 +1027,7 @@
  * A total of 2 does fast/slow probes with a weighted average.
  * A total of 3 or more adds more slow probes, taking the average.
  */
-//#define MULTIPLE_PROBING 3
+#define MULTIPLE_PROBING 2
 //#define EXTRA_PROBING    1
 
 /**
@@ -1286,8 +1286,8 @@
   #if ENABLED(G26_MESH_VALIDATION)
     #define MESH_TEST_NOZZLE_SIZE    0.4  // (mm) Diameter of primary nozzle.
     #define MESH_TEST_LAYER_HEIGHT   0.2  // (mm) Default layer height for the G26 Mesh Validation Tool.
-    #define MESH_TEST_HOTEND_TEMP  205    // (°C) Default nozzle temperature for the G26 Mesh Validation Tool.
-    #define MESH_TEST_BED_TEMP      60    // (°C) Default bed temperature for the G26 Mesh Validation Tool.
+    #define MESH_TEST_HOTEND_TEMP  215    // (°C) Default nozzle temperature for the G26 Mesh Validation Tool.
+    #define MESH_TEST_BED_TEMP      70    // (°C) Default bed temperature for the G26 Mesh Validation Tool.
     #define G26_XY_FEEDRATE         20    // (mm/s) Feedrate for XY Moves for the G26 Mesh Validation Tool.
     #define G26_RETRACT_MULTIPLIER   1.0  // G26 Q (retraction) used by default between mesh test elements.
   #endif
@@ -1297,7 +1297,7 @@
 #if EITHER(AUTO_BED_LEVELING_LINEAR, AUTO_BED_LEVELING_BILINEAR)
 
   // Set the number of grid points per dimension.
-  #define GRID_MAX_POINTS_X 4
+  #define GRID_MAX_POINTS_X 5
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
   // Probe along the Y axis, advancing X after each column
