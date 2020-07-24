@@ -38,7 +38,7 @@
 //
 // Servos
 //
-#define SERVO0_PIN         P2_13 //DOOR
+//#define SERVO0_PIN         P2_13 //DOOR
 //#define SERVO0_PIN         P0_10 //SCR_ON
 
 //
