@@ -421,7 +421,7 @@
  *   12345 or 500: Cetus stock hotend
  *   123456 or 499: Cetus stock bed
  */
-#define TEMP_SENSOR_0 12345
+#define TEMP_SENSOR_0 500
 #define TEMP_SENSOR_1 0
 #define TEMP_SENSOR_2 0
 #define TEMP_SENSOR_3 0
@@ -758,8 +758,8 @@
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 640, 640, 640, 920 }     //128  with Stock
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 1280, 1280, 1280, 1840 } //256  with Stock
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 1280, 1280, 1280, 920 } //256 128 e with Stock
-//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 80, 415 }        //16  with BMG
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 160, 830 }     //32  with BMG 830 or 816
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 80, 415 }        //16  with BMG
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 160, 830 }     //32  with BMG 830 or 816
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 320, 320, 320, 1660 }    //64  with BMG
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 640, 640, 640, 3320 }    //128 with BMG
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 1280, 1280, 1280, 6640 } //256 with BMG
@@ -1003,7 +1003,7 @@
  *
  * Specify a Probe position as { X, Y, Z }
  */
-#define NOZZLE_TO_PROBE_OFFSET { 0, -33, -1.0 }
+#define NOZZLE_TO_PROBE_OFFSET { 0, -33, -1.00 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
@@ -1016,7 +1016,7 @@
 #define Z_PROBE_SPEED_FAST HOMING_FEEDRATE_Z
 
 // Feedrate (mm/m) for the "accurate" probe of each point
-#define Z_PROBE_SPEED_SLOW (Z_PROBE_SPEED_FAST / 3)
+#define Z_PROBE_SPEED_SLOW (Z_PROBE_SPEED_FAST / 2)
 
 /**
  * Multiple Probing
@@ -1297,7 +1297,7 @@
 #if EITHER(AUTO_BED_LEVELING_LINEAR, AUTO_BED_LEVELING_BILINEAR)
 
   // Set the number of grid points per dimension.
-  #define GRID_MAX_POINTS_X 4
+  #define GRID_MAX_POINTS_X 5
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
   // Probe along the Y axis, advancing X after each column
