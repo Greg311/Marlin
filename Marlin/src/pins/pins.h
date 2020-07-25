@@ -400,6 +400,8 @@
   #include "lpc1769/pins_TH3D_EZBOARD.h"        // LPC1769                                env:LPC1769
 #elif MB(BTT_SKR_V1_4_TURBO)
   #include "lpc1769/pins_BTT_SKR_V1_4_TURBO.h"  // LPC1769                                env:LPC1769
+#elif MB(TINYFABV5)
+  #include "lpc1769/pins_TINYFABV5.h"           // LPC1769                                env:LPC1769
 
 //
 // Due (ATSAM) boards
