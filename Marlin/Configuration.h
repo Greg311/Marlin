@@ -742,7 +742,9 @@
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 1280, 1280, 1280, 1840 } //256  with Stock
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 1280, 1280, 1280, 920 } //256 128 e with Stock
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 80, 415 }        //16  with BMG
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 160, 830 }     //32  with BMG 830 or 816
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 160, 830 }     //32  with BMG 830 or 816
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 80, 409 }        //16  with Hemera
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 160, 818 }     //32  with Hemera
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 320, 320, 320, 1660 }    //64  with BMG
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 640, 640, 640, 3320 }    //128 with BMG
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 1280, 1280, 1280, 6640 } //256 with BMG
@@ -1083,7 +1085,7 @@
 // @section extruder
 
 // For direct drive extruder v9 set to true, for geared extruder set to false.
-#define INVERT_E0_DIR true
+#define INVERT_E0_DIR false
 #define INVERT_E1_DIR false
 #define INVERT_E2_DIR false
 #define INVERT_E3_DIR false
