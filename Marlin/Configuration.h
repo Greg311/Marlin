@@ -743,8 +743,11 @@
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 1280, 1280, 1280, 920 } //256 128 e with Stock
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 80, 415 }        //16  with BMG
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 160, 830 }     //32  with BMG 830 or 816
-//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 80, 409 }        //16  with Hemera
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 160, 818 }     //32  with Hemera
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 80, 397.5 }        //16  with Hemera
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 160, 795 }     //32  with Hemera
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 320, 320, 320, 1590 }     //64  with Hemera
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 640, 640, 640, 3180 }     //128  with Hemera
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 1280, 1280, 1280, 6360 }     //256  6544 with Hemera
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 320, 320, 320, 1660 }    //64  with BMG
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 640, 640, 640, 3320 }    //128 with BMG
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 1280, 1280, 1280, 6640 } //256 with BMG
@@ -759,7 +762,7 @@
  * Override with M203
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 180, 180, 180, 80 }
+#define DEFAULT_MAX_FEEDRATE          { 250, 250, 250, 120 }
 
 //#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
 #if ENABLED(LIMITED_MAX_FR_EDITING)
@@ -1002,8 +1005,8 @@
  * A total of 2 does fast/slow probes with a weighted average.
  * A total of 3 or more adds more slow probes, taking the average.
  */
-#define MULTIPLE_PROBING 2
-//#define EXTRA_PROBING    1
+#define MULTIPLE_PROBING 3
+#define EXTRA_PROBING    1
 
 /**
  * Z probes require clearance when deploying, stowing, and moving between
@@ -1021,7 +1024,7 @@
  */
 #define Z_CLEARANCE_DEPLOY_PROBE   0 // Z Clearance for Deploy/Stow
 #define Z_CLEARANCE_BETWEEN_PROBES  1 // Z Clearance between probe points
-#define Z_CLEARANCE_MULTI_PROBE     0.5 // Z Clearance between multiple probes
+#define Z_CLEARANCE_MULTI_PROBE     0.2 // Z Clearance between multiple probes
 #define Z_AFTER_PROBING           2 // Z position after probing is done
 
 #define Z_PROBE_LOW_POINT          -2 // Farthest distance below the trigger-point to go before stopping
