@@ -411,7 +411,7 @@
  *   12345 or 500: Cetus stock hotend
  *   123456 or 499: Cetus stock bed
  */
-#define TEMP_SENSOR_0 500
+#define TEMP_SENSOR_0 12345
 #define TEMP_SENSOR_1 0
 #define TEMP_SENSOR_2 0
 #define TEMP_SENSOR_3 0
@@ -570,7 +570,7 @@
  * Note: For Bowden Extruders make this large enough to allow load/unload.
  */
 #define PREVENT_LENGTHY_EXTRUDE
-#define EXTRUDE_MAXLENGTH 650
+#define EXTRUDE_MAXLENGTH 1000
 
 //===========================================================================
 //======================== Thermal Runaway Protection =======================
@@ -743,11 +743,11 @@
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 1280, 1280, 1280, 920 } //256 128 e with Stock
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 80, 415 }        //16  with BMG
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 160, 830 }     //32  with BMG 830 or 816
-//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 80, 397.5 }        //16  with Hemera
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 80, 397.5 }        //16  with Hemera
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 160, 795 }     //32  with Hemera
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 320, 320, 320, 1590 }     //64  with Hemera
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 640, 640, 640, 3180 }     //128  with Hemera
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 1280, 1280, 1280, 6360 }     //256  6544 with Hemera
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 1280, 1280, 1280, 6360 }     //256  6544 with Hemera
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 320, 320, 320, 1660 }    //64  with BMG
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 640, 640, 640, 3320 }    //128 with BMG
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 1280, 1280, 1280, 6640 } //256 with BMG
@@ -762,7 +762,7 @@
  * Override with M203
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 250, 250, 250, 120 }
+#define DEFAULT_MAX_FEEDRATE          { 180, 180, 12, 80 }
 
 //#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
 #if ENABLED(LIMITED_MAX_FR_EDITING)
@@ -985,16 +985,16 @@
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
-#define MIN_PROBE_EDGE 10
+#define MIN_PROBE_EDGE 5
 
 // X and Y axis travel speed (mm/m) between probes
-#define XY_PROBE_SPEED 8000
+#define XY_PROBE_SPEED 5000
 
 // Feedrate (mm/m) for the first approach when double-probing (MULTIPLE_PROBING == 2)
 #define Z_PROBE_SPEED_FAST HOMING_FEEDRATE_Z
 
 // Feedrate (mm/m) for the "accurate" probe of each point
-#define Z_PROBE_SPEED_SLOW (Z_PROBE_SPEED_FAST / 2)
+#define Z_PROBE_SPEED_SLOW (Z_PROBE_SPEED_FAST / 3)
 
 /**
  * Multiple Probing
@@ -1005,8 +1005,8 @@
  * A total of 2 does fast/slow probes with a weighted average.
  * A total of 3 or more adds more slow probes, taking the average.
  */
-#define MULTIPLE_PROBING 3
-#define EXTRA_PROBING    1
+#define MULTIPLE_PROBING 2
+//#define EXTRA_PROBING    1
 
 /**
  * Z probes require clearance when deploying, stowing, and moving between
@@ -1024,7 +1024,7 @@
  */
 #define Z_CLEARANCE_DEPLOY_PROBE   0 // Z Clearance for Deploy/Stow
 #define Z_CLEARANCE_BETWEEN_PROBES  1 // Z Clearance between probe points
-#define Z_CLEARANCE_MULTI_PROBE     0.2 // Z Clearance between multiple probes
+#define Z_CLEARANCE_MULTI_PROBE     0.5 // Z Clearance between multiple probes
 #define Z_AFTER_PROBING           2 // Z position after probing is done
 
 #define Z_PROBE_LOW_POINT          -2 // Farthest distance below the trigger-point to go before stopping
@@ -1121,8 +1121,8 @@
 #define Y_BED_SIZE 180
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
-#define X_MIN_POS 0
-#define Y_MIN_POS 0
+#define X_MIN_POS -2
+#define Y_MIN_POS -3
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
@@ -1276,7 +1276,7 @@
 #if EITHER(AUTO_BED_LEVELING_LINEAR, AUTO_BED_LEVELING_BILINEAR)
 
   // Set the number of grid points per dimension.
-  #define GRID_MAX_POINTS_X 5
+  #define GRID_MAX_POINTS_X 4
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
   // Probe along the Y axis, advancing X after each column
@@ -1390,7 +1390,7 @@
 
 // Homing speeds (mm/m)
 #define HOMING_FEEDRATE_XY (3000)
-#define HOMING_FEEDRATE_Z  (3000)
+#define HOMING_FEEDRATE_Z  (6 * 60)
 
 // Validate that endstops are triggered on homing moves
 //#define VALIDATE_HOMING_ENDSTOPS
