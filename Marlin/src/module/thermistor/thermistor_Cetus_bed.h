@@ -21,8 +21,8 @@
  */
 #define REVERSE_TEMP_SENSOR_RANGE_123456 1
 
-//const temp_entry_t temptable_123456[] PROGMEM = {
-const short temptable_123456[][2] PROGMEM = {
+const temp_entry_t temptable_123456[] PROGMEM = {
+//const short temptable_123456[][2] PROGMEM = {
   { OV(  26), 10 },
   { OV(  52), 20 },
   { OV(  78), 30 },

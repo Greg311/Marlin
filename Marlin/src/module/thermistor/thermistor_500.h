@@ -24,8 +24,8 @@
 #define REVERSE_TEMP_SENSOR_RANGE_500 1
 
 // Pt100 with INA826 amp on Ultimaker v2.0 electronics
-//const temp_entry_t temptable_500[] PROGMEM = {
-const short temptable_500[][2] PROGMEM = {
+const temp_entry_t temptable_500[] PROGMEM = {
+//const short temptable_500[][2] PROGMEM = {
   { OV(   0),   0 },
   { OV(  46),   5 },
   { OV(  62),  20 },
