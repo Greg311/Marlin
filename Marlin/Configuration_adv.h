@@ -2292,7 +2292,7 @@
   #endif
 
   #if AXIS_IS_TMC(E0)
-    #define E0_CURRENT      400
+    #define E0_CURRENT      847
     #define E0_MICROSTEPS    256
     #define E0_RSENSE         0.075
     #define E0_CHAIN_POS     -1
@@ -2540,7 +2540,7 @@
    * Beta feature!
    * Create a 50/50 square wave step pulse optimal for stepper drivers.
    */
-  //#define SQUARE_WAVE_STEPPING
+  #define SQUARE_WAVE_STEPPING
 
   /**
    * Enable M122 debugging command for TMC stepper drivers.
