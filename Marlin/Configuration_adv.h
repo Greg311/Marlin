@@ -2081,7 +2081,7 @@
   #define FILAMENT_UNLOAD_PURGE_RETRACT       15  // (mm) Unload initial retract length.
   #define FILAMENT_UNLOAD_PURGE_DELAY       5000  // (ms) Delay for the filament to cool after retract.
   #define FILAMENT_UNLOAD_PURGE_LENGTH         16  // (mm) An unretract is done, then this length is purged.
-  #define FILAMENT_UNLOAD_PURGE_FEEDRATE      20  // (mm/s) feedrate to purge before unload
+  #define FILAMENT_UNLOAD_PURGE_FEEDRATE      10  // (mm/s) feedrate to purge before unload
   #define FILAMENT_UNLOAD_PHASE1_LENGTH       35 // (mm)fast phase
   #define FILAMENT_UNLOAD_PHASE2_LENGTH       45 // (mm)slow phase
 

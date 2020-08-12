@@ -421,7 +421,7 @@
  *   12345 or 500: Cetus stock hotend
  *   123456 or 499: Cetus stock bed
  */
-#define TEMP_SENSOR_0 500
+#define TEMP_SENSOR_0 12345
 #define TEMP_SENSOR_1 0
 #define TEMP_SENSOR_2 0
 #define TEMP_SENSOR_3 0
