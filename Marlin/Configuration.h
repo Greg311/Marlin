@@ -760,7 +760,7 @@
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 1280, 1280, 1280, 920 } //256 128 e with Stock
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 80, 415 }        //16  with BMG
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 160, 830 }     //32  with BMG 830 or 816
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 80, 409 }        //16  with Hemera 397.5 low
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 80, 397.5 }        //16  with Hemera 397.5 low
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 160, 795 }     //32  with Hemera
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 320, 320, 320, 1590 }     //64  with Hemera
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 640, 640, 640, 3180 }     //128  with Hemera
@@ -1008,7 +1008,7 @@
  *
  * Specify a Probe position as { X, Y, Z }
  */
-#define NOZZLE_TO_PROBE_OFFSET { 0, -33, -0.550 }
+#define NOZZLE_TO_PROBE_OFFSET { 0, -33, -0.70 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
