@@ -186,6 +186,12 @@ typedef struct { int16_t value, celsius; } temp_entry_t;
 #if ANY_THERMISTOR_IS(123456) // Cetus Bed
   #include "thermistor_Cetus_bed.h"
 #endif
+#if ANY_THERMISTOR_IS(900) // PT100 Cetus UP
+  #include "thermistor_900.h"
+#endif
+#if ANY_THERMISTOR_IS(901) // inverted NTC 100K Cetus
+  #include "thermistor_901.h"
+#endif
 #if ANY_THERMISTOR_IS(666) // beta25 = UNK, R25 = 200K, Pull-up = 10 kOhm, "Unidentified 200K NTC thermistor (Einstart S)"
   #include "thermistor_666.h"
 #endif
