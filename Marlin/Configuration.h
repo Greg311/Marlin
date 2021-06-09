@@ -424,7 +424,7 @@
  *   12345 or 500: Cetus stock hotend
  *   123456 or 499: Cetus stock bed
  */
-#define TEMP_SENSOR_0 900
+#define TEMP_SENSOR_0 500
 #define TEMP_SENSOR_1 0
 #define TEMP_SENSOR_2 0
 #define TEMP_SENSOR_3 0
@@ -432,7 +432,7 @@
 #define TEMP_SENSOR_5 0
 #define TEMP_SENSOR_6 0
 #define TEMP_SENSOR_7 0
-#define TEMP_SENSOR_BED 901
+#define TEMP_SENSOR_BED 499
 #define TEMP_SENSOR_PROBE 0
 #define TEMP_SENSOR_CHAMBER 0
 #define TEMP_SENSOR_COOLER 0
@@ -826,7 +826,7 @@
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 160, 795 }     //32  with Hemera
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 320, 320, 320, 1590 }     //64  with Hemera
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 640, 640, 640, 3180 }     //128  with Hemera
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 1280, 1280, 1280, 6360 }     //256  6544 with Hemera
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 1280, 1280, 1280, 5920 }     //256  6544 with Hemera
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 320, 320, 320, 1660 }    //64  with BMG
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 640, 640, 640, 3320 }    //128 with BMG
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 1280, 1280, 1280, 6640 } //256 with BMG
@@ -854,7 +854,7 @@
  * Override with M201
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 1000, 1000, 200, 5000 }
+#define DEFAULT_MAX_ACCELERATION      { 2000, 2000, 2000, 5000 }
 
 //#define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2
 #if ENABLED(LIMITED_MAX_ACCEL_EDITING)
@@ -885,7 +885,7 @@
 #if ENABLED(CLASSIC_JERK)
   #define DEFAULT_XJERK 8.0
   #define DEFAULT_YJERK 8.0
-  #define DEFAULT_ZJERK  2
+  #define DEFAULT_ZJERK 8.0
 
   //#define TRAVEL_EXTRA_XYJERK 0.0     // Additional jerk allowance for all travel moves
 
@@ -1083,7 +1083,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { 0, -33, -0.700 }
+#define NOZZLE_TO_PROBE_OFFSET { 0, -33, -0.95 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
